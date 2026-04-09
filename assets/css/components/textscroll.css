@@ -2,6 +2,18 @@
 textscroll
 ============================================ */
 
+@keyframes scrollOne {
+  to {
+    translate: calc(100% - 100cqi);
+  }
+}
+
+@keyframes scrollTwo {
+  to {
+    translate: calc(-100% + 100cqi);
+  }
+}
+
 .textscroll {
   --textscroll-fontsize: clamp(72px, 12vi, 210px);
   --textscroll-color: var(--color-neutral-300);
@@ -18,6 +30,11 @@ textscroll
   text-wrap: nowrap;
 
   overflow-x: clip;
+
+  /* 
+		- défini comme container dans la diemnsion inline-size
+		- quand on utilise des CQI comme unité (voir les anims scrollStart et scrollEnd), le browser remonte dans l'arbre du document jusqu'au premier container inilmine défini. 
+	*/
   container-type: inline-size;
 
   & > p {
@@ -26,10 +43,23 @@ textscroll
 }
 
 .textscroll__one {
-  direction: rtl;
-  text-align: start;
+  inline-size: min-content;
+  /* 
+  - par default on translate celui-ci de -100% de sa taille + 100cqi de son container (.textscroll)
+  - on utilise transform comme propriété psq on va utiliser translate dans nos animations, comme cela pas de conflit
+  */
+  transform: translateX(calc(-100% + 100cqi));
+
+  @supports (animation-timeline: view()) {
+    animation: scrollOne linear both;
+    animation-timeline: view();
+  }
 }
 
 .textscroll__two {
-  text-align: end;
+  inline-size: min-content;
+  @supports (animation-timeline: view()) {
+    animation: scrollTwo linear both;
+    animation-timeline: view();
+  }
 }

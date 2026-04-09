@@ -1,0 +1,6 @@
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    translate: 0 100%;
+  }
+}

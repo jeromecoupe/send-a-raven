@@ -9,6 +9,7 @@
 @import "base/html.css" layer(base);
 @import "base/body.css" layer(base);
 @import "base/fonts.css" layer(base);
+@import "base/animations.css" layer(base);
 
 /* COMPONENTS */
 @import "components/container.css" layer(components);

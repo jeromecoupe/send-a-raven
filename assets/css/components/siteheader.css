@@ -31,10 +31,25 @@ header
   font-size: var(--siteheader-font-size);
   margin-block-end: 0.6ch;
   letter-spacing: -0.06ch;
+}
 
-  & > span {
-    display: block;
-  }
+.siteheader__title > div {
+  overflow: clip;
+}
+
+.siteheader__title span {
+  display: inline-block;
+
+  /* nom de l'animation */
+  animation-name: slideInFromBottom;
+  /* durée de l'animation */
+  animation-duration: 0.36s;
+  /* délais avant animation (variables définies dans le HTML via l'attribut style) */
+  animation-delay: var(--delay);
+  /* easing */
+  animation-timing-function: ease-out;
+  /* attend sur la première frame de l'animation et quand l'animation est finie, reste sur la dernière frame */
+  animation-fill-mode: both;
 }
 
 .siteheader__vtext {

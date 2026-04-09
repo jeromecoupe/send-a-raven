@@ -3,16 +3,25 @@ CTA Link (call to action)
 ============================================ */
 
 .ctalink {
-	display: inline-block;
+  --cta-border-color: var(--color-accent);
 
-	font-weight: 500;
-	line-height: 1.2;
-	font-size: var(--fontsize-200);
-	color: var(--color-text-highlight);
-	text-transform: uppercase;
-	letter-spacing: 0.24ch;
+  display: inline-block;
 
-	text-decoration: none;
-	padding-block-end: 0.54em;
-	border-block-end: 3px solid var(--color-accent);
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: var(--fontsize-200);
+  color: var(--color-text-highlight);
+  text-transform: uppercase;
+  letter-spacing: 0.24ch;
+
+  text-decoration: none;
+  padding-block-end: 0.54em;
+  border-block-end: 3px solid var(--cta-border-color);
+
+  transition: border-color 0.2s ease-out;
+
+  &:hover,
+  &:focus-within {
+    --cta-border-color: var(--color-accent-bright);
+  }
 }

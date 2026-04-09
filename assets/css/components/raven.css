@@ -23,7 +23,7 @@ raven
 
 .raven__media::before {
   content: "";
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-bright);
   z-index: 1;
   mix-blend-mode: multiply;
   opacity: 0;
