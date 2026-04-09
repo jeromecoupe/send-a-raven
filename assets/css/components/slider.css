@@ -1,0 +1,33 @@
+/* ============================================
+slider
+============================================ */
+
+.slider {
+	--slider-gap: 24px;
+	--slider-slide-size: min(84%, 372px);
+
+	container-type: inline-size;
+	container-name: --slider;
+}
+
+.slider__track {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: var(--slider-slide-size);
+	gap: var(--slider-gap);
+
+	padding-block-end: 1rem;
+
+	overflow: scroll hidden;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x: contain;
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-accent) transparent;
+}
+
+.slider__slide {
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+}

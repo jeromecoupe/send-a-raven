@@ -1,0 +1,19 @@
+/* ============================================
+footer
+============================================ */
+
+.sitefooter {
+	--sitefooter-padding: clamp(30px, 1.273rem + 2.752vi, 60px);
+
+	text-align: center;
+	padding-block: var(--sitefooter-padding);
+}
+
+.sitefooter__social {
+	margin-block-end: 24px;
+}
+
+.sitefooter__copyright > p {
+	font-size: var(--fontsize-200);
+	color: var(--color-text-secondary);
+}

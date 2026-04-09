@@ -1,0 +1,39 @@
+/* ============================================
+dyptich
+============================================ */
+
+.dyptich {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-areas:
+		"img"
+		"txt";
+	gap: 24px;
+
+	@media (width >= 750px) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-areas: "txt img";
+		gap: 60px;
+	}
+
+	@media (width >= 1024px) {
+		grid-template-columns:
+			minmax(0, 4fr)
+			minmax(0, 1fr)
+			minmax(0, 5fr);
+		grid-template-areas: "txt . img";
+		gap: 24px;
+	}
+}
+
+.dyptich--center {
+	align-items: center;
+}
+
+.dyptich__text {
+	grid-area: txt;
+}
+
+.dyptich__media {
+	grid-area: img;
+}

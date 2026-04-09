@@ -1,0 +1,42 @@
+/* ============================================
+typography
+============================================ */
+
+/* modularscale: https://www.modularscale.com/?18,16&px&1.25 */
+
+:root {
+	--fontstack-main: "Switzer", "Helvetica", system-ui, sans-serif;
+	--fontstack-alt: "Literata", "Georgia", serif;
+
+	--fontsize-100: calc(13 / 16 * 1rem);
+	--fontsize-200: calc(14 / 16 * 1rem);
+	--fontsize-300: 1rem;
+	--fontsize-400: calc(18 / 16 * 1rem);
+	--fontsize-500: calc(20 / 16 * 1rem);
+
+	--fontsize-heading4: clamp(
+		23 / 16 *
+		1rem,
+		1.371rem +
+		0.213vi,
+		25 / 16 *
+		1rem
+	);
+	--fontsize-heading3: clamp(
+		25 / 16 *
+		1rem,
+		1.463rem +
+		0.319vi,
+		28 / 16 *
+		1rem
+	);
+	--fontsize-heading2: clamp(28 / 16 * 1rem, 1.65rem + 0.319vi, 31 / 16 * 1rem);
+	--fontsize-heading1: clamp(
+		31 / 16 *
+		1rem,
+		1.805rem +
+		0.426vi,
+		35 / 16 *
+		1rem
+	);
+}
