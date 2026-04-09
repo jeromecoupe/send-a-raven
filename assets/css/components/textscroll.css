@@ -3,32 +3,33 @@ textscroll
 ============================================ */
 
 .textscroll {
-	--textscroll-fontsize: clamp(72px, 12vi, 210px);
-	--textscroll-color: var(--color-neutral-300);
+  --textscroll-fontsize: clamp(72px, 12vi, 210px);
+  --textscroll-color: var(--color-neutral-300);
 
-	position: relative;
+  position: relative;
 
-	font-weight: 300;
-	font-size: var(--textscroll-fontsize);
-	line-height: 1;
-	color: var(--textscroll-color);
-	font-family: var(--fontstack-alt);
-	text-transform: uppercase;
+  font-weight: 300;
+  font-size: var(--textscroll-fontsize);
+  line-height: 1;
+  color: var(--textscroll-color);
+  font-family: var(--fontstack-alt);
+  text-transform: uppercase;
 
-	text-wrap: nowrap;
+  text-wrap: nowrap;
 
-	overflow-x: clip;
-	container-type: inline-size;
+  overflow-x: clip;
+  container-type: inline-size;
 
-	& > p {
-		margin: 0;
-	}
+  & > p {
+    margin: 0;
+  }
 }
 
 .textscroll__one {
-	text-align: start;
+  direction: rtl;
+  text-align: start;
 }
 
 .textscroll__two {
-	text-align: end;
+  text-align: end;
 }

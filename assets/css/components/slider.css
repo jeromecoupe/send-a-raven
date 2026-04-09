@@ -2,32 +2,87 @@
 slider
 ============================================ */
 
-.slider {
-	--slider-gap: 24px;
-	--slider-slide-size: min(84%, 372px);
+/*
+1. mettre tous les slides en horizontal (flexbox + gap)
+2. gérer overflow x (scroll)
+3. il faut que chaque slide "snap" en start quand on scroll 
+*/
 
-	container-type: inline-size;
-	container-name: --slider;
+.slider {
+  --slider-gap: 24px;
+  --slider-slide-size: min(420px, 70vi);
+  --slider-slide-alignment: center;
+
+  anchor-name: --slider;
 }
 
 .slider__track {
-	display: grid;
-	grid-auto-flow: column;
-	grid-auto-columns: var(--slider-slide-size);
-	gap: var(--slider-gap);
+  display: grid;
+  /* créer des nouvelles colonnes automatiquement (plutôt que des rangées par defaut) */
+  grid-auto-flow: column;
+  /* taille des colonnes crées par defaut */
+  grid-auto-columns: var(--slider-slide-size);
+  gap: var(--slider-gap);
 
-	padding-block-end: 1rem;
+  padding-block-end: 12px;
 
-	overflow: scroll hidden;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	overscroll-behavior-x: contain;
+  /* barre de defailement horizontale pour gérer les contenus qui dépassent */
+  overflow-x: scroll;
+  /* garder le scroll dans le scroller et le pas le trasférer plus "haut" dans le DOM (changement de pages dans le navigateur) */
+  overscroll-behavior-x: contain;
 
-	scrollbar-width: thin;
-	scrollbar-color: var(--color-accent) transparent;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+
+  /* scroll snap sur l'axe des x et obligatoire */
+  scroll-snap-type: x mandatory;
+
+  /* faire une transition au scroll plutôt qu'un cut */
+  scroll-behavior: smooth;
 }
 
 .slider__slide {
-	scroll-snap-align: start;
-	scroll-snap-stop: always;
+  /* snap au centre du scroller */
+  scroll-snap-align: var(--slider-slide-alignment);
+  /* eviter de "passer" des slides (toujours d'arrêter au slide suivant */
+  scroll-snap-stop: always;
+}
+
+@supports selector(.slider__track::scroll-button(*)) {
+  .slider__track::scroll-button(*) {
+    --scrollbutton-size: 54px;
+
+    aspect-ratio: 1;
+    color: black;
+    inline-size: var(--scrollbutton-size);
+    block-size: var(--scrollbutton-size);
+    background-color: white;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: "Material Symbols", system-ui, sans-serif;
+    z-index: 3;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .slider__track::scroll-button(left) {
+    content: "←" / "previous";
+    position: fixed;
+    position-anchor: --slider;
+    position-area: center span-end;
+    translate: 24px 0;
+  }
+
+  .slider__track::scroll-button(right) {
+    content: "→" / "next";
+    position: fixed;
+    position-anchor: --slider;
+    position-area: center span-start;
+    translate: -24px 0;
+  }
+
+  .slider__track::scroll-button(*):disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
 }

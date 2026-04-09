@@ -3,26 +3,27 @@ colors
 ============================================ */
 
 :root {
-	color-scheme: light dark;
+  color-scheme: light dark;
 
-	--color-neutral-100: hsl(180, 3%, 6%);
-	--color-neutral-200: hsl(185, 3%, 12%);
-	--color-neutral-300: hsl(185, 3%, 24%);
-	--color-neutral-400: hsl(185, 3%, 42%);
-	--color-neutral-500: hsl(185, 3%, 54%);
-	--color-neutral-600: hsl(185, 3%, 66%);
-	--color-neutral-700: hsl(185, 3%, 72%);
-	--color-neutral-800: hsl(185, 3%, 84%);
-	--color-neutral-900: hsl(185, 3%, 95%);
+  --color-neutral-100: hsl(180, 3%, 6%);
+  --color-neutral-200: hsl(185, 3%, 12%);
+  --color-neutral-300: hsl(185, 3%, 24%);
+  --color-neutral-400: hsl(185, 3%, 42%);
+  --color-neutral-500: hsl(185, 3%, 54%);
+  --color-neutral-600: hsl(185, 3%, 66%);
+  --color-neutral-700: hsl(185, 3%, 72%);
+  --color-neutral-800: hsl(185, 3%, 84%);
+  --color-neutral-900: hsl(185, 3%, 95%);
 
-	--color-red: hsl(9, 84%, 40%);
+  --color-red: hsl(9, 84%, 40%);
 
-	--color-accent: var(--color-red);
-	--color-bkg-primary: var(--color-neutral-100);
-	--color-text-primary: var(--color-neutral-700);
-	--color-text-highlight: var(--color-neutral-900);
+  --color-accent: var(--color-red);
+  --color-bkg-primary: var(--color-neutral-100);
+  --color-text-primary: var(--color-neutral-700);
+  --color-text-secondary: var(--color-neutral-400);
+  --color-text-highlight: var(--color-neutral-900);
 }
 
 html[scheme="dark"] {
-	color-scheme: dark;
+  color-scheme: dark;
 }
