@@ -1,0 +1,29 @@
+/* ============================================
+mainnav
+============================================ */
+
+.mainnav {
+  --mainnav-fontsize: clamp(35 / 16 * 1rem, 1.666rem + 2.385vi, 61 / 16 * 1rem);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 6px;
+
+  text-align: start;
+}
+
+.mainnav__link {
+  display: inline-block;
+  color: white;
+  font-weight: 200;
+  line-height: 1.2;
+  font-size: var(--mainnav-fontsize);
+  text-decoration: none;
+  font-family: var(--fontstack-main);
+}

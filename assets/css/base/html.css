@@ -3,8 +3,12 @@ html
 ============================================ */
 
 html {
-	font-weight: 400;
-	font-size: 100%;
-	line-height: 1.5;
-	font-family: var(--fontstack-main);
+  font-weight: 400;
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: var(--fontstack-main);
+}
+
+html:has(.navmenu[open]) {
+  overflow-y: clip;
 }

@@ -18,7 +18,7 @@
 @import "components/siteheader.css" layer(components);
 @import "components/sitefooter.css" layer(components);
 @import "components/section.css" layer(components);
-@import "components/hamburger.css" layer(components);
+@import "components/navmenu-button.css" layer(components);
 @import "components/ctalink.css" layer(components);
 @import "components/slider.css" layer(components);
 @import "components/fluidimage.css" layer(components);
@@ -28,6 +28,8 @@
 @import "components/textscroll.css" layer(components);
 @import "components/dyptich.css" layer(components);
 @import "components/socialmedia.css" layer(components);
+@import "components/navmenu.css" layer(components);
+@import "components/mainnav.css" layer(components);
 
 /* UTILITIES */
 @import "utilities/visually-hidden.css" layer(utilities);

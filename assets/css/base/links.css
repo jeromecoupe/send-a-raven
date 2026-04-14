@@ -5,6 +5,7 @@ links
 a {
   color: inherit;
   text-decoration: underline;
+  text-decoration-color: var(--color-accent-bright);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3ch;
   text-decoration-skip-ink: all;

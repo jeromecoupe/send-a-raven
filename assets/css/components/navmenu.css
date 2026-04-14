@@ -1,0 +1,61 @@
+/* ============================================
+navmenu
+============================================ */
+
+.navmenu {
+  --navmenu-block-padding: 36px;
+  --navmenu-inline-padding: clamp(18px, 0.5rem + 3vi, 30px);
+  --navmenu-transition-time: 0.5s;
+  --navmenu-background-color: var(--color-bkg-primary);
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: var(--navmenu-block-padding) var(--navmenu-inline-padding);
+  border: none;
+  background-color: var(--navmenu-background-color);
+
+  inline-size: 100%;
+  block-size: 100%;
+  max-width: unset;
+  max-height: unset;
+
+  display: none;
+
+  opacity: 0;
+
+  transition:
+    display var(--navmenu-transition-time) allow-discrete,
+    overlay var(--navmenu-transition-time) allow-discrete,
+    opacity var(--navmenu-transition-time) ease-out;
+}
+
+.navmenu[open] {
+  display: block;
+  opacity: 1;
+  translate: 0 0;
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.navmenu__content {
+  block-size: 100%;
+  max-inline-size: 1500px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.navmenu__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 6px;
+}
+
+.navmenu__main {
+  align-self: center;
+}

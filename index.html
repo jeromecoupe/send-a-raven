@@ -27,7 +27,12 @@
           </p>
           <div class="siteheader__hamburger">
             <nav>
-              <button type="button" class="hamburger">
+              <button
+                commandfor="navmenu"
+                command="show-modal"
+                class="navmenu-button"
+                type="button"
+              >
                 <span class="visually-hidden">Open Menu</span>
                 <svg
                   width="24"
@@ -48,6 +53,55 @@
           </div>
         </div>
       </div>
+      <dialog class="navmenu" id="navmenu">
+        <div class="navmenu__content">
+          <div class="navmenu__actions">
+            <button
+              commandfor="navmenu"
+              command="close"
+              class="navmenu-button"
+              type="button"
+            >
+              <span class="visually-hidden">Close Menu</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Close Menu</title>
+                <g fill="currentColor">
+                  <path
+                    d="M3.51465 4.92871L19.0713 20.4854L20.4854 19.0713L4.92871 3.51465L3.51465 4.92871Z"
+                  />
+                  <path
+                    d="M3.51465 19.0713L4.92871 20.4854L20.4854 4.92871L19.0713 3.51465L3.51465 19.0713Z"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="navmenu__main">
+            <nav>
+              <ul class="mainnav">
+                <li class="mainnav__item">
+                  <a class="mainnav__link" href="#">Book a bird</a>
+                </li>
+                <li class="mainnav__item">
+                  <a class="mainnav__link" href="#">Services</a>
+                </li>
+                <li class="mainnav__item">
+                  <a class="mainnav__link" href="#">Company</a>
+                </li>
+                <li class="mainnav__item">
+                  <a class="mainnav__link" href="#">Contact us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </dialog>
     </header>
     <main>
       <div class="section">
