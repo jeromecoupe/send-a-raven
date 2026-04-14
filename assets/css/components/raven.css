@@ -4,11 +4,13 @@ raven
 
 .raven {
   display: block;
+  background-color: color-mix(var(--color-bkg-primary), white 6%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  overflow: clip;
 }
 
 .raven__media {
-  margin-block-end: 24px;
-
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -41,6 +43,7 @@ raven
 
 .raven__text {
   margin-inline-end: 24px;
+  padding: 30px 24px;
 }
 
 .raven__title {
@@ -53,4 +56,5 @@ raven
 
 .raven__description {
   color: var(--color-text-secondary);
+  margin: 0;
 }

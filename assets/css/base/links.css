@@ -1,0 +1,16 @@
+/* ============================================
+links
+============================================ */
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3ch;
+  text-decoration-skip-ink: all;
+
+  &:hover,
+  &:focus-within {
+    text-decoration-thickness: 2px;
+  }
+}

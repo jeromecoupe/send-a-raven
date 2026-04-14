@@ -16,7 +16,7 @@ colors
   --color-neutral-900: hsl(185, 3%, 95%);
 
   --color-red: hsl(9, 84%, 40%);
-  --color-red-bright: hsl(9, 75%, 50%);
+  --color-red-bright: hsl(9, 87%, 50%);
 
   --color-accent: var(--color-red);
   --color-accent-bright: var(--color-red-bright);

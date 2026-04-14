@@ -10,6 +10,15 @@ advantages
   }
 }
 
+.advantage::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: var(--color-accent);
+  margin-block-end: 42px;
+}
+
 .advantage:nth-of-type(2) {
   margin-block-start: calc(var(--advantage-shift-distance) * 2);
 }
