@@ -10,4 +10,5 @@ reset
 
 html {
   scrollbar-gutter: stable;
+  scrollbar-color: var(--color-accent) transparent;
 }
