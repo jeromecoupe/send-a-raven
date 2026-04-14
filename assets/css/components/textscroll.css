@@ -43,6 +43,7 @@ textscroll
   @supports (animation-timeline: view()) {
     animation: scrollOne linear both;
     animation-timeline: view();
+    animation-range: entry 0% exit 100%;
   }
 }
 
@@ -53,5 +54,6 @@ textscroll
   @supports (animation-timeline: view()) {
     animation: scrollTwo linear both;
     animation-timeline: view();
+    animation-range: entry 0% exit 100%;
   }
 }

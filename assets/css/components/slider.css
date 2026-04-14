@@ -27,15 +27,15 @@ slider
   padding-block-end: 24px;
 
   /* barre de defailement horizontale pour gérer les contenus qui dépassent */
-  overflow-x: scroll;
-  /* garder le scroll dans le scroller et le pas le trasférer plus "haut" dans le DOM (changement de pages dans le navigateur) */
-  overscroll-behavior-x: contain;
+  overflow-inline: scroll;
+  /* garder le scroll dans le scroller et le pas le transférer plus "haut" dans le DOM (changement de pages dans le navigateur) */
+  overscroll-behavior-inline: contain;
 
   scrollbar-width: thin;
   scrollbar-color: var(--color-accent) transparent;
 
   /* scroll snap sur l'axe des x et obligatoire */
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: inline mandatory;
 
   /* faire une transition au scroll plutôt qu'un cut */
   scroll-behavior: smooth;
@@ -69,7 +69,7 @@ slider
     content: "←" / "previous";
     position: fixed;
     position-anchor: --slider;
-    position-area: center span-end;
+    position-area: center span-inline-end;
     translate: 24px -50%;
   }
 
@@ -77,7 +77,7 @@ slider
     content: "→" / "next";
     position: fixed;
     position-anchor: --slider;
-    position-area: center span-start;
+    position-area: center span-inline-start;
     translate: -24px -50%;
   }
 

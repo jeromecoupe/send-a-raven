@@ -24,6 +24,7 @@
 @import "components/fluidimage.css" layer(components);
 @import "components/raven.css" layer(components);
 @import "components/advantage.css" layer(components);
+@import "components/advantages-list.css" layer(components);
 @import "components/titles.css" layer(components);
 @import "components/textscroll.css" layer(components);
 @import "components/dyptich.css" layer(components);
