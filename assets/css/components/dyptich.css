@@ -2,6 +2,15 @@
 dyptich
 ============================================ */
 
+@keyframes wipeFromLeft {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
 .dyptich {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
@@ -36,4 +45,20 @@ dyptich
 
 .dyptich__media {
 	grid-area: img;
+	background-color: var(--color-accent);
+}
+
+.dyptich__media > img {
+	@supports (animation-timeline: view()) {
+		timeline-trigger-name: --t;
+		trigger-scope: --t;
+		timeline-trigger-source: view();
+		timeline-trigger-activation-range: entry 120px exit 100%;
+
+		animation-name: wipeFromLeft;
+		animation-duration: 0.5s;
+		animation-timing-function: ease-out;
+		animation-fill-mode: both;
+		animation-trigger: --t play-once;
+	}
 }
