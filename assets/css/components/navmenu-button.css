@@ -7,17 +7,17 @@ hamburger button
 ============================================ */
 
 .navmenu-button {
-  --navmenu-button-padding: 12px;
+	--navmenu-button-padding: 12px;
 
-  background-color: var(--color-accent);
-  border-radius: 999px;
-  color: white;
-  border: none;
-  padding: var(--navmenu-button-padding);
-  aspect-ratio: 1;
-  cursor: pointer;
+	background-color: var(--color-accent);
+	border-radius: 999px;
+	color: white;
+	border: none;
+	padding: var(--navmenu-button-padding);
+	aspect-ratio: 1;
+	cursor: pointer;
 }
 
 .navmenu-button svg {
-  display: block;
+	display: block;
 }

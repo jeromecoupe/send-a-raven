@@ -13,7 +13,7 @@ advantages
   animation-timing-function: linear;
   animation-fill-mode: both;
   animation-timeline: view();
-  animation-range: entry 0 entry 100%;
+  animation-range: entry 60px entry 100%;
 }
 
 .advantage::before {

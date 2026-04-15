@@ -4,6 +4,7 @@ mainnav
 
 .mainnav {
   --mainnav-fontsize: clamp(35 / 16 * 1rem, 1.666rem + 2.385vi, 61 / 16 * 1rem);
+  --mainnav-gap: 6px;
 
   list-style: none;
   margin: 0;
@@ -13,17 +14,39 @@ mainnav
   flex-direction: column;
   justify-content: start;
   align-items: stretch;
-  gap: 6px;
+  gap: var(--mainnav-gap);
 
   text-align: start;
 }
 
+.mainnav__item {
+  /* 
+		sibling-index = la position / le numéro d'ordre d'un element dans le DOM par rapport à ses frères et soeurs (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/sibling-index)
+		- ici les .mainnav__item sont des <li> qui ont comme frères et soeurs les autres <li> de la liste
+		- sibling-index() vaut 1 pour le premier <li>, 2 pour le 2eme, etc.
+		- cela nous permet d'avoir des délais décalés pour chque item nde la nav
+	*/
+
+  --delay: calc((sibling-index() - 1) * 0.1s);
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: slideInFromLeft 0.2s var(--delay) var(--easing-overshoot) both;
+  }
+}
+
 .mainnav__link {
   display: inline-block;
-  color: white;
+  color: var(--color-text-primary);
   font-weight: 200;
   line-height: 1.2;
   font-size: var(--mainnav-fontsize);
   text-decoration: none;
   font-family: var(--fontstack-main);
+
+  transition: color 0.2s ease-out;
+
+  &:hover,
+  &:focus-within {
+    color: var(--color-text-highlight);
+  }
 }

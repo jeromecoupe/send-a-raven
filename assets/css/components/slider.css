@@ -9,80 +9,80 @@ slider
 */
 
 .slider {
-  --slider-gap: 24px;
-  --slider-slide-size: min(420px, 70vi);
-  --slider-slide-alignment: center;
+	--slider-gap: 24px;
+	--slider-slide-size: min(420px, 70vi);
+	--slider-slide-alignment: center;
 
-  anchor-name: --slider;
+	anchor-name: --slider;
 }
 
 .slider__track {
-  display: grid;
-  /* créer des nouvelles colonnes automatiquement (plutôt que des rangées par defaut) */
-  grid-auto-flow: column;
-  /* taille des colonnes crées par defaut */
-  grid-auto-columns: var(--slider-slide-size);
-  gap: var(--slider-gap);
+	display: grid;
+	/* créer des nouvelles colonnes automatiquement (plutôt que des rangées par defaut) */
+	grid-auto-flow: column;
+	/* taille des colonnes crées par defaut */
+	grid-auto-columns: var(--slider-slide-size);
+	gap: var(--slider-gap);
 
-  padding-block-end: 24px;
+	padding-block-end: 24px;
 
-  /* barre de defailement horizontale pour gérer les contenus qui dépassent */
-  overflow-inline: scroll;
-  /* garder le scroll dans le scroller et le pas le transférer plus "haut" dans le DOM (changement de pages dans le navigateur) */
-  overscroll-behavior-inline: contain;
+	/* barre de defailement horizontale pour gérer les contenus qui dépassent */
+	overflow-inline: scroll;
+	/* garder le scroll dans le scroller et le pas le transférer plus "haut" dans le DOM (changement de pages dans le navigateur) */
+	overscroll-behavior-inline: contain;
 
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-accent) transparent;
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-accent) transparent;
 
-  /* scroll snap sur l'axe des x et obligatoire */
-  scroll-snap-type: inline mandatory;
+	/* scroll snap sur l'axe des x et obligatoire */
+	scroll-snap-type: inline mandatory;
 
-  /* faire une transition au scroll plutôt qu'un cut */
-  scroll-behavior: smooth;
+	/* faire une transition au scroll plutôt qu'un cut */
+	scroll-behavior: smooth;
 }
 
 .slider__slide {
-  /* snap au centre du scroller */
-  scroll-snap-align: var(--slider-slide-alignment);
-  /* eviter de "passer" des slides (toujours d'arrêter au slide suivant */
-  scroll-snap-stop: always;
+	/* snap au centre du scroller */
+	scroll-snap-align: var(--slider-slide-alignment);
+	/* eviter de "passer" des slides (toujours d'arrêter au slide suivant */
+	scroll-snap-stop: always;
 }
 
 @supports selector(.slider__track::scroll-button(*)) {
-  .slider__track::scroll-button(*) {
-    --scrollbutton-size: 54px;
+	.slider__track::scroll-button(*) {
+		--scrollbutton-size: 54px;
 
-    aspect-ratio: 1;
-    color: black;
-    font-weight: 600;
-    inline-size: var(--scrollbutton-size);
-    background-color: white;
-    border: none;
-    border-radius: 999px;
-    cursor: pointer;
-    font-family: system-ui, sans-serif;
-    z-index: 3;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-  }
+		aspect-ratio: 1;
+		color: black;
+		font-weight: 600;
+		inline-size: var(--scrollbutton-size);
+		background-color: white;
+		border: none;
+		border-radius: 999px;
+		cursor: pointer;
+		font-family: system-ui, sans-serif;
+		z-index: 3;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	}
 
-  .slider__track::scroll-button(inline-start) {
-    content: "←" / "previous";
-    position: fixed;
-    position-anchor: --slider;
-    position-area: center span-inline-end;
-    translate: 24px -50%;
-  }
+	.slider__track::scroll-button(inline-start) {
+		content: "←" / "previous";
+		position: fixed;
+		position-anchor: --slider;
+		position-area: center span-inline-end;
+		translate: 24px -50%;
+	}
 
-  .slider__track::scroll-button(inline-end) {
-    content: "→" / "next";
-    position: fixed;
-    position-anchor: --slider;
-    position-area: center span-inline-start;
-    translate: -24px -50%;
-  }
+	.slider__track::scroll-button(inline-end) {
+		content: "→" / "next";
+		position: fixed;
+		position-anchor: --slider;
+		position-area: center span-inline-start;
+		translate: -24px -50%;
+	}
 
-  .slider__track::scroll-button(*):disabled {
-    opacity: 0.2;
-    cursor: not-allowed;
-  }
+	.slider__track::scroll-button(*):disabled {
+		opacity: 0.2;
+		cursor: not-allowed;
+	}
 }

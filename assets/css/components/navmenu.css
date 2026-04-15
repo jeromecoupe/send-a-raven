@@ -2,60 +2,82 @@
 navmenu
 ============================================ */
 
+/*
+.navmenu est un element <dialog>
+*/
+
 .navmenu {
-  --navmenu-block-padding: 36px;
-  --navmenu-inline-padding: clamp(18px, 0.5rem + 3vi, 30px);
-  --navmenu-transition-time: 0.5s;
-  --navmenu-background-color: var(--color-bkg-primary);
+	--navmenu-block-padding: 36px;
+	--navmenu-inline-padding: clamp(18px, 0.5rem + 3vi, 30px);
+	--navmenu-max-inline-size: 1500px;
+	--navmenu-transition-time: 0.2s;
+	--navmenu-background-color: var(--color-bkg-primary);
 
-  box-sizing: border-box;
-  margin: 0;
-  padding: var(--navmenu-block-padding) var(--navmenu-inline-padding);
-  border: none;
-  background-color: var(--navmenu-background-color);
+	box-sizing: border-box;
 
-  inline-size: 100%;
-  block-size: 100%;
-  max-width: unset;
-  max-height: unset;
+	/* supprimer quelques styles par defaut des <dialog> ouverts */
+	margin: unset;
+	border: unset;
+	inline-size: 100%;
+	block-size: 100%;
+	max-inline-size: unset;
+	max-block-size: unset;
 
-  display: none;
+	/* padding */
+	padding-inline: var(--navmenu-inline-padding);
+	padding-block: var(--navmenu-block-padding);
 
-  opacity: 0;
+	background-color: var(--navmenu-background-color);
 
-  transition:
-    display var(--navmenu-transition-time) allow-discrete,
-    overlay var(--navmenu-transition-time) allow-discrete,
-    opacity var(--navmenu-transition-time) ease-out;
+	display: none;
+	opacity: 0;
+
+	/* 
+  ici on doit faire 3 transition: 
+  - une transition avec. des valeurs numériques (opacité: ok)
+  - une transiton de display (none vers block > pas possible pour le navigateur de faire une transition mais le mode "allow-discrete" va lui dire d'attendre la fin nde la transition aveant de faire le switch)
+  - une transiton de overlay (le mettre sur le top layer > pas possible pour le navigateur de faire une transition puisque c'est un booléen mais le mode "allow-discrete" va lui dire d'attendre la fin nde la transition avant de faire le switch)
+  */
+	@media (prefers-reduced-motion: no-preference) {
+		transition:
+			display var(--navmenu-transition-time) allow-discrete,
+			overlay var(--navmenu-transition-time) allow-discrete,
+			opacity var(--navmenu-transition-time) ease-out;
+	}
 }
 
+/* quand un <dialog> est affiché il a un attribut open */
 .navmenu[open] {
-  display: block;
-  opacity: 1;
-  translate: 0 0;
+	display: block;
+	opacity: 1;
 
-  @starting-style {
-    opacity: 0;
-  }
+	/* comme il vient de display: none; > pas de valeur d'opacité, on lui donne une valeur de départ avec starting-style */
+	@starting-style {
+		opacity: 0;
+	}
 }
 
 .navmenu__content {
-  block-size: 100%;
-  max-inline-size: 1500px;
-  margin: 0 auto;
+	/* 
+    max width et centré avec des marges automatiques
+    la max-width === celle du .container
+  */
+	max-inline-size: var(--navmenu-max-inline-size);
+	margin: 0 auto;
 
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: auto 1fr;
+	block-size: 100%;
 }
 
 .navmenu__actions {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  gap: 6px;
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
 }
 
 .navmenu__main {
-  align-self: center;
+	/* c'est un grid item: alignement au centre sur l'axe block */
+	align-self: center;
 }

@@ -3,12 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Send a Raven</title>
+    <title>Send a raven</title>
     <meta
       name="description"
-      content="Trust a raven with your messages instead of a pigeon"
+      content="Trust a raven with your messages instead of a pigeon."
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Send a raven" />
+    <meta
+      property="og:description"
+      content="Trust a raven with your messages instead of a pigeon."
+    />
+    <meta property="og:image" content="/assets/img/socialmedia.jpg" />
+    <meta property="og:type" content="website" />
+
+    <!-- preload used fonts -->
     <link
       rel="preload"
       href="/assets/fonts/literata-variable.woff2"
@@ -78,6 +88,7 @@
           </div>
         </div>
       </div>
+      <!-- dialog element https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog -->
       <dialog class="navmenu" id="navmenu">
         <div class="navmenu__content">
           <div class="navmenu__actions">
@@ -416,7 +427,13 @@
           </ul>
         </div>
         <div class="sitefooter__copyright">
-          <p>Copyright 2026 - La Casa Productions / Webstoemp</p>
+          <p class="statement">
+            Please do not feed bread to ravens ... they will first swell and
+            eventually explode ... we don't want that. We really don't. Thanks.
+          </p>
+          <p class="copyright">
+            Copyright 2026 - La Casa Productions / Webstoemp
+          </p>
         </div>
       </div>
     </footer>

@@ -3,6 +3,7 @@
 /* SETTINGS */
 @import "settings/colors.css" layer(settings);
 @import "settings/typography.css" layer(settings);
+@import "settings/easings.css" layer(settings);
 
 /* BASE */
 @import "base/reset.css" layer(base);
@@ -31,6 +32,7 @@
 @import "components/socialmedia.css" layer(components);
 @import "components/navmenu.css" layer(components);
 @import "components/mainnav.css" layer(components);
+@import "components/statement.css" layer(components);
 
 /* UTILITIES */
 @import "utilities/visually-hidden.css" layer(utilities);

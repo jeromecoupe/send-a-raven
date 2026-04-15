@@ -1,7 +1,21 @@
 @keyframes slideInFromBottom {
   from {
     opacity: 0;
-    translate: 0 120px;
+    translate: 0 90px;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    translate: -90px 0;
+  }
+}
+
+@keyframes wipeFromLeft {
+  from {
+    opacity: 0;
+    translate: 0 90px;
   }
 }
 

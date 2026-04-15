@@ -14,15 +14,19 @@ advantages list
   grid-template-columns: minmax(0, 1fr);
   gap: 30px;
 
-  @media (width>= 750px) {
+  @media (width >= 750px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 .advantages-list li:nth-child(2) {
-  margin-block-start: var(--list-shift-distance);
+  @media (width >= 750px) {
+    margin-block-start: var(--list-shift-distance);
+  }
 }
 
 .advantages-list li:nth-child(3) {
-  margin-block-start: calc(var(--list-shift-distance) / 2);
+  @media (width >= 750px) {
+    margin-block-start: calc(var(--list-shift-distance) / 2);
+  }
 }

@@ -3,35 +3,35 @@ titles
 ============================================ */
 
 :where(.h1, .h2, .h3, .h4) {
-  font-weight: 500;
-  line-height: 1.3;
-  font-family: var(--fontstack-main);
-  color: var(--color-text-highlight);
-  margin-block-end: 1em;
+	font-weight: 500;
+	line-height: 1.3;
+	font-family: var(--fontstack-main);
+	color: var(--color-text-highlight);
+	margin-block-end: 1em;
 }
 
 .h1 {
-  font-size: var(--fontsize-heading1);
+	font-size: var(--fontsize-heading1);
 }
 
 .h2 {
-  font-size: var(--fontsize-heading2);
+	font-size: var(--fontsize-heading2);
 }
 
 .h2 {
-  font-size: var(--fontsize-heading3);
+	font-size: var(--fontsize-heading3);
 }
 
 .h4 {
-  font-size: var(--fontsize-heading4);
+	font-size: var(--fontsize-heading4);
 }
 
 .suptitle {
-  font-style: normal;
-  font-weight: 450;
-  font-size: var(--fontsize-100);
-  color: var(--color-accent-bright);
-  text-transform: uppercase;
-  letter-spacing: 0.18ch;
-  margin-block-end: 0.5em;
+	font-style: normal;
+	font-weight: 450;
+	font-size: var(--fontsize-100);
+	color: var(--color-accent-bright);
+	text-transform: uppercase;
+	letter-spacing: 0.18ch;
+	margin-block-end: 0.5em;
 }

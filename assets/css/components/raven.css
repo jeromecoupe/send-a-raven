@@ -3,58 +3,58 @@ raven
 ============================================ */
 
 .raven {
-  display: block;
-  background-color: color-mix(var(--color-bkg-primary), white 6%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 6px;
-  overflow: clip;
+	display: block;
+	background-color: color-mix(var(--color-bkg-primary), white 6%);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 6px;
+	overflow: clip;
 }
 
 .raven__media {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
 }
 
 .raven__media > *,
 .raven__media::before {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  /* idem que "grid-area: 1 / 2;" */
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	/* idem que "grid-area: 1 / 2;" */
 }
 
 .raven__media::before {
-  content: "";
-  background-color: var(--color-accent-bright);
-  z-index: 1;
-  mix-blend-mode: multiply;
-  opacity: 0;
+	content: "";
+	background-color: var(--color-accent-bright);
+	z-index: 1;
+	mix-blend-mode: multiply;
+	opacity: 0;
 
-  transition: opacity 0.2s ease-out;
+	transition: opacity 0.2s ease-out;
 }
 
 .raven__link {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .raven__link:hover .raven__media::before {
-  opacity: 1;
+	opacity: 1;
 }
 
 .raven__text {
-  margin-inline-end: 24px;
-  padding: 30px 24px;
+	margin-inline-end: 24px;
+	padding: 30px 24px;
 }
 
 .raven__title {
-  font-weight: 450;
-  font-size: var(--fontsize-heading4);
-  line-height: 1.2;
-  color: white;
-  margin-block-end: 0.5em;
+	font-weight: 450;
+	font-size: var(--fontsize-heading4);
+	line-height: 1.2;
+	color: white;
+	margin-block-end: 0.5em;
 }
 
 .raven__description {
-  color: var(--color-text-secondary);
-  margin: 0;
+	color: var(--color-text-secondary);
+	margin: 0;
 }

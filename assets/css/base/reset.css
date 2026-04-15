@@ -5,10 +5,10 @@ reset
 *,
 *::before,
 *::after {
-  margin-block-start: 0;
+	margin-block-start: 0;
 }
 
 html {
-  scrollbar-gutter: stable;
-  scrollbar-color: var(--color-accent) transparent;
+	scrollbar-gutter: stable;
+	scrollbar-color: var(--color-accent) transparent;
 }

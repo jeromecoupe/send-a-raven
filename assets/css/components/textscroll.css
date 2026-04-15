@@ -3,57 +3,67 @@ textscroll
 ============================================ */
 
 @keyframes scrollOne {
-  to {
-    translate: 100% 0;
-  }
+	to {
+		translate: 100% 0;
+	}
 }
 
 @keyframes scrollTwo {
-  to {
-    translate: -100% 0;
-  }
+	to {
+		translate: -100% 0;
+	}
 }
 
 .textscroll {
-  --textscroll-fontsize: clamp(72px, 12vi, 210px);
-  --textscroll-color: var(--color-neutral-300);
+	--textscroll-fontsize: clamp(72px, 12vi, 210px);
+	--textscroll-color: var(--color-neutral-300);
 
-  position: relative;
+	position: relative;
 
-  font-weight: 300;
-  font-size: var(--textscroll-fontsize);
-  line-height: 1;
-  color: var(--textscroll-color);
-  font-family: var(--fontstack-alt);
-  text-transform: uppercase;
+	font-weight: 300;
+	font-size: var(--textscroll-fontsize);
+	line-height: 1;
+	color: var(--textscroll-color);
+	font-family: var(--fontstack-alt);
+	text-transform: uppercase;
 
-  text-wrap: nowrap;
+	text-wrap: nowrap;
 
-  overflow-x: clip;
+	overflow-x: clip;
 
-  & > p {
-    margin: 0;
-  }
+	& > p {
+		margin: 0;
+	}
 }
 
 .textscroll__one {
-  display: flex;
-  flex-direction: row-reverse;
+	display: flex;
+	flex-direction: row-reverse;
 
-  @supports (animation-timeline: view()) {
-    animation: scrollOne linear both;
-    animation-timeline: view();
-    animation-range: entry 0% exit 100%;
-  }
+	@media (prefers-reduced-motion: no-preference) {
+		@supports (animation-timeline: view()) {
+			animation-name: scrollOne;
+			animation-timing-function: linear;
+			animation-fill-mode: both;
+
+			animation-timeline: view();
+			animation-range: entry 0 exit 100%;
+		}
+	}
 }
 
 .textscroll__two {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  @supports (animation-timeline: view()) {
-    animation: scrollTwo linear both;
-    animation-timeline: view();
-    animation-range: entry 0% exit 100%;
-  }
+	@media (prefers-reduced-motion: no-preference) {
+		@supports (animation-timeline: view()) {
+			animation-name: scrollTwo;
+			animation-timing-function: linear;
+			animation-fill-mode: both;
+
+			animation-timeline: view();
+			animation-range: entry 0 exit 100%;
+		}
+	}
 }

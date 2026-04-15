@@ -3,35 +3,40 @@ body
 ============================================ */
 
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 
-  background-color: var(--color-bkg-primary);
-  background-image:
-    url(../../img/hero_bkg_800.jpg), url(../../img/bottom_bkg_800.jpg);
-  background-position:
-    50% 0,
-    50% 100%;
-  background-repeat: no-repeat;
-  background-size:
-    100% auto,
-    auto auto;
+	background-color: var(--color-bkg-primary);
+	background-image:
+		url(../../img/hero_bkg_800.jpg), url(../../img/bottom_bkg_800.jpg);
+	background-position:
+		50% 0,
+		50% 100%;
+	background-repeat: no-repeat;
+	background-size:
+		100% auto,
+		auto auto;
 
-  color: var(--color-text-primary);
+	color: var(--color-text-primary);
 
-  @media (width >= 800px) {
-    background-image:
-      url(../../img/hero_bkg_1024.jpg), url(../../img/bottom_bkg_1024.jpg);
-  }
+	@media (width >= 800px) {
+		background-image:
+			url(../../img/hero_bkg_1024.jpg), url(../../img/bottom_bkg_1024.jpg);
+	}
 
-  @media (width >= 1024px) {
-    background-image:
-      url(../../img/hero_bkg_1500.jpg), url(../../img/bottom_bkg_1500.jpg);
-  }
+	@media (width >= 1024px) {
+		background-image:
+			url(../../img/hero_bkg_1500.jpg), url(../../img/bottom_bkg_1500.jpg);
+	}
 
-  @media (width >= 1500px) {
-    background-size:
-      auto auto,
-      auto auto;
-  }
+	@media (width >= 1500px) {
+		background-size:
+			auto auto,
+			auto auto;
+	}
+}
+
+/* on cache le overflow sur l'axe des Y quand body contient (:has) un élément avec une classe de .navmenu qui a un attribut open */
+body:has(.navmenu[open]) {
+	overflow-y: hidden;
 }
