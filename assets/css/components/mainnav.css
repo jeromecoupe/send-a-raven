@@ -30,9 +30,9 @@ mainnav
   --delay: calc((sibling-index() - 1) * 0.1s);
 
   @media (prefers-reduced-motion: no-preference) {
-    animation: slideInFromLeft 0.2s var(--delay) var(--easing-overshoot) both;
+    animation: slideInFromLeft 0.2s var(--easing-overshoot) both;
+    animation-delay: var(--delay);
   }
-}
 
 .mainnav__link {
   display: inline-block;
