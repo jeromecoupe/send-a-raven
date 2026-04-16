@@ -3,62 +3,62 @@ dyptich
 ============================================ */
 
 @keyframes wipeFromLeft {
-	from {
-		clip-path: inset(0 100% 0 0);
-	}
-	to {
-		clip-path: inset(0 0 0 0);
-	}
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .dyptich {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr);
-	grid-template-areas:
-		"img"
-		"txt";
-	gap: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "img"
+    "txt";
+  gap: 24px;
 
-	@media (width >= 750px) {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		grid-template-areas: "txt img";
-		gap: 60px;
-	}
+  @media (width >= 750px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "txt img";
+    gap: 60px;
+  }
 
-	@media (width >= 1024px) {
-		grid-template-columns:
-			minmax(0, 4fr)
-			minmax(0, 1fr)
-			minmax(0, 5fr);
-		grid-template-areas: "txt . img";
-		gap: 24px;
-	}
+  @media (width >= 1024px) {
+    grid-template-columns:
+      minmax(0, 4fr)
+      minmax(0, 1fr)
+      minmax(0, 5fr);
+    grid-template-areas: "txt . img";
+    gap: 24px;
+  }
 }
 
 .dyptich--center {
-	align-items: center;
+  align-items: center;
 }
 
 .dyptich__text {
-	grid-area: txt;
+  grid-area: txt;
 }
 
 .dyptich__media {
-	grid-area: img;
-	background-color: var(--color-accent);
+  grid-area: img;
+  background-color: var(--color-accent);
 }
 
 .dyptich__media > img {
-	@supports (animation-timeline: view()) {
-		timeline-trigger-name: --t;
-		trigger-scope: --t;
-		timeline-trigger-source: view();
-		timeline-trigger-activation-range: entry 120px exit 100%;
+  @supports (animation-timeline: view()) {
+    timeline-trigger-name: --t;
+    timeline-trigger-source: view();
+    timeline-trigger-activation-range: entry 50% exit 100%;
 
-		animation-name: wipeFromLeft;
-		animation-duration: 0.5s;
-		animation-timing-function: ease-out;
-		animation-fill-mode: both;
-		animation-trigger: --t play-once;
-	}
+    animation-name: wipeFromLeft;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+
+    animation-trigger: --t play-once;
+  }
 }
