@@ -17,6 +17,8 @@ mainnav
   gap: var(--mainnav-gap);
 
   text-align: start;
+
+  overflow: clip;
 }
 
 .mainnav__item {
@@ -27,12 +29,13 @@ mainnav
 		- cela nous permet d'avoir des délais décalés pour chque item nde la nav
 	*/
 
-  --delay: calc((sibling-index() - 1) * 0.1s);
+  --delay: calc((sibling-index()) * 0.2s);
 
   @media (prefers-reduced-motion: no-preference) {
-    animation: slideInFromLeft 0.2s var(--easing-overshoot) both;
+    animation: slideInFromLeft 0.2s var(--easing-test) both;
     animation-delay: var(--delay);
   }
+}
 
 .mainnav__link {
   display: inline-block;

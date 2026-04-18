@@ -3,106 +3,103 @@ header
 ============================================ */
 
 @keyframes animTitle {
-	0% {
-		transform-origin: 50% 0;
-		opacity: 0;
-		translate: 0 100%;
-		scale: 1 1;
-	}
+  0% {
+    transform-origin: 50% 0;
+    opacity: 0;
+    translate: 0 100%;
+    scale: 1 1;
+  }
 
-	50% {
-		transform-origin: 50% 0;
-		opacity: 1;
-		translate: 0 0;
-		scale: 1 0.9;
-	}
+  50% {
+    transform-origin: 50% 0;
+    opacity: 1;
+    translate: 0 0;
+    scale: 1 0.9;
+  }
 
-	100% {
-		transform-origin: 50% 0;
-		scale: 1 1;
-	}
+  100% {
+    transform-origin: 50% 0;
+    scale: 1 1;
+  }
 }
 
 .siteheader {
-	--siteheader-mb: 36px;
+  --siteheader-margin-bottom: 36px;
 
-	text-align: center;
-	margin-block: var(--siteheader-mb);
+  text-align: center;
+  margin-block: var(--siteheader-margin-bottom);
 }
 
 .siteheader__content {
-	--siteheader-pbs: clamp(180px, 26vi, 420px);
+  --siteheader-padding-block-start: clamp(180px, 26vi, 420px);
 
-	position: relative;
-	padding-block-start: var(--siteheader-pbs);
+  position: relative;
+  padding-block-start: var(--siteheader-padding-block-start);
 }
 
 .siteheader__title {
-	--siteheader-font-size: clamp(
-		66 / 16 *
-		1rem,
-		-0.5rem +
-		21vi,
-		300 / 16 *
-		1rem
-	);
+  --siteheader-font-size: clamp(
+    66 / 16 * 1rem,
+    -0.5rem + 21vi,
+    300 / 16 * 1rem
+  );
 
-	font-weight: 350;
-	line-height: 0.9;
-	font-family: var(--fontstack-alt);
-	text-transform: uppercase;
-	color: var(--color-accent);
-	font-size: var(--siteheader-font-size);
-	margin-block-end: 0.6ch;
-	letter-spacing: -0.03ch;
+  font-weight: 350;
+  line-height: 0.9;
+  font-family: var(--fontstack-alt);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-size: var(--siteheader-font-size);
+  margin-block-end: 0.6ch;
+  letter-spacing: -0.03ch;
 }
 
 .siteheader__title > div {
-	overflow: clip;
+  overflow: clip;
 }
 
 .siteheader__title span {
-	--animation-duration: 0.5s;
+  --animation-duration: 0.5s;
 
-	display: inline-block;
+  display: inline-block;
 
-	/* nom de l'animation */
-	animation-name: animTitle;
-	/* durée de l'animation */
-	animation-duration: var(--animation-duration);
-	/* délais avant animation (variables définies dans le HTML via l'attribut style) */
-	animation-delay: var(--delay);
-	/* easing */
-	animation-timing-function: ease-out;
-	/* attend sur la première frame de l'animation et quand l'animation est finie, reste sur la dernière frame */
-	animation-fill-mode: both;
+  /* nom de l'animation */
+  animation-name: animTitle;
+  /* durée de l'animation */
+  animation-duration: var(--animation-duration);
+  /* délais avant animation (variables définies dans le HTML via l'attribut style) */
+  animation-delay: var(--delay);
+  /* easing */
+  animation-timing-function: ease-out;
+  /* attend sur la première frame de l'animation et quand l'animation est finie, reste sur la dernière frame */
+  animation-fill-mode: both;
 }
 
 .siteheader__vtext {
-	position: absolute;
-	display: inline-block;
-	margin: 0;
+  position: absolute;
+  display: inline-block;
+  margin: 0;
 
-	font-weight: 500;
-	writing-mode: sideways-rl;
-	color: var(--color-text-secondary);
-	text-transform: uppercase;
-	font-size: var(--fontsize-200);
-	letter-spacing: 0.24ch;
+  font-weight: 500;
+  writing-mode: sideways-rl;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  font-size: var(--fontsize-200);
+  letter-spacing: 0.24ch;
 }
 
 .siteheader__vtext--start {
-	top: 0;
-	left: 0;
+  top: 0;
+  left: 0;
 }
 
 .siteheader__vtext--end {
-	bottom: 0;
-	right: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .siteheader__hamburger {
-	position: absolute;
-	top: 0;
-	right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
