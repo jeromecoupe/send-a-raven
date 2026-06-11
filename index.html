@@ -6,7 +6,7 @@
     <title>Send a raven</title>
     <meta
       name="description"
-      content="Trust a raven with your messages instead of a pigeon."
+      content="Trust a smart raven with your messages instead of a stupid pigeon."
     />
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -24,21 +24,21 @@
     <!-- preload used fonts -->
     <link
       rel="preload"
-      href="/assets/fonts/literata-variable.woff2"
+      href="//dist/fonts/literata-variable.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/assets/fonts/switzer-variable.woff2"
+      href="//dist/fonts/switzer-variable.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/assets/fonts/switzer-variable-italic.woff2"
+      href="//dist/fonts/switzer-variable-italic.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -46,15 +46,19 @@
   </head>
   <body>
     <header class="siteheader">
-      <div class="container">
+      <div class="container container--full">
         <div class="siteheader__content">
           <h1 class="siteheader__title">
-            <div>
-              <span style="--delay: 0">Send</span>
-            </div>
-            <div>
-              <span style="--delay: 0.25s">a Raven</span>
-            </div>
+            <span>
+              <span class="siteheader__titletext" style="--delay: 0">
+                Send
+              </span>
+            </span>
+            <span>
+              <span class="siteheader__titletext" style="--delay: 0.25s">
+                a Raven
+              </span>
+            </span>
           </h1>
           <p><a class="ctalink" href="#">Book a bird</a></p>
           <p class="siteheader__vtext siteheader__vtext--start">
@@ -147,7 +151,7 @@
         <div class="container container--md">
           <ul class="advantages-list">
             <li>
-              <div class="advantage">
+              <div class="advantage" data-scrollanimation="slideFromBottom">
                 <h2 class="h3">Fast</h2>
                 <p>
                   <a href="#">Lorem ipsum</a> dolor sit amet consectetur
@@ -162,7 +166,7 @@
               </div>
             </li>
             <li>
-              <div class="advantage">
+              <div class="advantage" data-scrollanimation="slideFromBottom">
                 <h2 class="h3">Reliable</h2>
                 <p>
                   Iste eveniet exercitationem iusto nam repellat necessitatibus
@@ -176,7 +180,7 @@
               </div>
             </li>
             <li>
-              <div class="advantage">
+              <div class="advantage" data-scrollanimation="slideFromBottom">
                 <h2 class="h3">Smart</h2>
                 <p>
                   Cumque eveniet consequatur sunt quaerat. Iste eveniet
@@ -199,8 +203,8 @@
           <div class="slider">
             <div class="slider__track">
               <div class="slider__slide">
-                <article class="raven js-raven">
-                  <a href="#" class="raven__link js-raven-link">
+                <article class="raven">
+                  <a href="#" class="raven__link">
                     <div class="raven__media">
                       <img
                         src="assets/img/ravens/noble_bruno.jpg"
@@ -223,8 +227,8 @@
                 </article>
               </div>
               <div class="slider__slide">
-                <article class="raven js-raven">
-                  <a href="#" class="raven__link js-raven-link">
+                <article class="raven">
+                  <a href="#" class="raven__link">
                     <div class="raven__media">
                       <img
                         src="assets/img/ravens/fluffy_james.jpg"
@@ -247,8 +251,8 @@
                 </article>
               </div>
               <div class="slider__slide">
-                <article class="raven js-raven">
-                  <a href="#" class="raven__link js-raven-link">
+                <article class="raven">
+                  <a href="#" class="raven__link">
                     <div class="raven__media">
                       <img
                         src="assets/img/ravens/shrieking_paul.jpg"
@@ -266,17 +270,13 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Iste aperiam placeat corporis aut, dicta deleniti.
                       </p>
-                      <audio
-                        class="js-raven-audio"
-                        src="assets/sounds/paul.mp3"
-                      ></audio>
                     </div>
                   </a>
                 </article>
               </div>
               <div class="slider__slide">
-                <article class="raven js-raven">
-                  <a href="#" class="raven__link js-raven-link">
+                <article class="raven">
+                  <a href="#" class="raven__link">
                     <div class="raven__media">
                       <img
                         src="assets/img/ravens/rapid_geoffrey.jpg"
@@ -294,17 +294,13 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Iste aperiam placeat corporis aut, dicta deleniti.
                       </p>
-                      <audio
-                        class="js-raven-audio"
-                        src="assets/sounds/geoffrey.mp3"
-                      ></audio>
                     </div>
                   </a>
                 </article>
               </div>
               <div class="slider__slide">
-                <article class="raven js-raven">
-                  <a class="raven__link js-raven-link" href="#">
+                <article class="raven">
+                  <a class="raven__link" href="#">
                     <div class="raven__media">
                       <img
                         src="assets/img/ravens/funky_larry.jpg"
@@ -327,8 +323,8 @@
                 </article>
               </div>
               <div class="slider__slide">
-                <article class="raven js-raven">
-                  <a href="#" class="raven__link js-raven-link">
+                <article class="raven">
+                  <a href="#" class="raven__link">
                     <div class="raven__media">
                       <img
                         src="assets/img/ravens/big_john.jpg"
@@ -364,7 +360,10 @@
       </div>
       <div class="section">
         <div class="container container--md">
-          <div class="dyptich dyptich--center">
+          <div
+            class="dyptich dyptich--center"
+            data-scrollanimation="slideFromBottom"
+          >
             <div class="dyptich__text">
               <p class="suptitle">Best in class</p>
               <h2 class="h2">Trust smart & stylish birds with your messages</h2>
@@ -456,7 +455,7 @@
         <div class="sitefooter__copyright">
           <p class="statement">
             Please do not feed bread to ravens ... they will first swell and
-            eventually explode ... we don't want that. We really don't. Thanks.
+            eventually explode ... we don't want that.
           </p>
           <p class="copyright">
             Copyright 2026 - La Casa Productions / Webstoemp

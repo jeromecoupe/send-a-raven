@@ -2,25 +2,11 @@
 advantages
 ============================================ */
 
-.advantage {
-  --advantage-shift-distance: 0;
-
-  @media (width >= 750px) {
-    --advantage-shift-distance: 90px;
-  }
-
-  animation-name: slideInFromBottom;
-  animation-timing-function: linear;
-  animation-fill-mode: both;
-  animation-timeline: view();
-  animation-range: entry 60px entry 100%;
-}
-
 .advantage::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 3px;
-  background-color: var(--color-accent);
-  margin-block-end: 42px;
+	content: "";
+	display: block;
+	width: 24px;
+	height: 3px;
+	background-color: var(--color-accent);
+	margin-block-end: 42px;
 }

@@ -1,26 +1,27 @@
 @keyframes slideInFromBottom {
   from {
     opacity: 0;
-    translate: 0 60px;
+    translate: 0 10vb;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    translate: 0 -10vb;
   }
 }
 
 @keyframes slideInFromLeft {
   from {
     opacity: 0;
-    translate: -60px 0;
+    translate: -10vi 0;
   }
 }
 
-@keyframes wipeFromLeft {
+@keyframes slideInFromRight {
   from {
     opacity: 0;
-    translate: 0 60px;
-  }
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
+    translate: 10vi 0;
   }
 }

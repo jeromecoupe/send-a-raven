@@ -8,7 +8,7 @@ typography
 	--fontstack-main: "Switzer", "Helvetica", system-ui, sans-serif;
 	--fontstack-alt: "Literata", "Georgia", serif;
 
-	--fontsize-100: calc(13 / 16 * 1rem);
+	--fontsize-100: calc(11 / 16 * 1rem);
 	--fontsize-200: calc(14 / 16 * 1rem);
 	--fontsize-300: 1rem;
 	--fontsize-400: calc(18 / 16 * 1rem);

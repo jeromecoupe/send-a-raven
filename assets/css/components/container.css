@@ -11,6 +11,10 @@ container
 	padding-inline: var(--container-padding);
 }
 
+.container--full {
+	max-inline-size: unset;
+}
+
 .container--md {
 	--container-max-size: 1024px;
 }

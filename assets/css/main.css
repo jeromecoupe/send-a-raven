@@ -33,6 +33,7 @@
 @import "components/navmenu.css" layer(components);
 @import "components/mainnav.css" layer(components);
 @import "components/statement.css" layer(components);
+@import "components/scroll-animations.css" layer(components);
 
 /* UTILITIES */
 @import "utilities/visually-hidden.css" layer(utilities);

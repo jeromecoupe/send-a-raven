@@ -1,0 +1,19 @@
+/* ============================================
+scroll animations
+============================================ */
+
+/* ============================================
+scroll triggered
+============================================ */
+
+[data-scrollanimation="slideFromBottom"] {
+  @supports (timeline-trigger-name: --trigger) {
+    timeline-trigger-name: --trigger;
+    timeline-trigger-source: view();
+    timeline-trigger-activation-range: entry 100px exit 100%;
+    trigger-scope: --trigger;
+
+    animation: slideInFromBottom 0.36s ease-out both;
+    animation-trigger: --trigger play-forwards play-backwards;
+  }
+}

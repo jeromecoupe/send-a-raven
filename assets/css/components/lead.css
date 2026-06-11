@@ -3,5 +3,5 @@ lead
 ============================================ */
 
 .lead {
-  color: var(--color-text-highlight);
+	color: var(--color-text-highlight);
 }

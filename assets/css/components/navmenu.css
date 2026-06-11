@@ -58,13 +58,6 @@ navmenu
 }
 
 .navmenu__content {
-	/* 
-    max width et centré avec des marges automatiques
-    la max-width === celle du .container
-  */
-	max-inline-size: var(--navmenu-max-inline-size);
-	margin: 0 auto;
-
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
 	grid-template-rows: auto 1fr;

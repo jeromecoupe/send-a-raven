@@ -1,0 +1,23 @@
+{
+  "name": "mm3b-send-a-raven",
+  "version": "1.0.0",
+  "description": "One page website for a fake raven message service.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeromecoupe/mm3b-send-a-raven.git"
+  },
+  "author": "Jérôme Coupé",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jeromecoupe/mm3b-send-a-raven/issues"
+  },
+  "homepage": "https://github.com/jeromecoupe/mm3b-send-a-raven#readme",
+  "scripts": {
+    "check": "biome check --write"
+  },
+  "browserslist": "> 0.5%, not dead",
+  "devDependencies": {
+    "@biomejs/biome": "2.4.16"
+  }
+}
